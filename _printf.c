@@ -27,3 +27,17 @@ int _printf(const char *format, ...)
 
 	return (size);
 }
+/**
+ * _strlen - computes the length of a string
+ * @str: string
+ *
+ * Return: Length
+ */
+int _strlen(const char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != 0; i++)
+	
+	return (i);
+}

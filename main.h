@@ -111,6 +111,7 @@ int _putchar(char);
 int buffer(char);
 
 /****************** UTILS ******************/
+int _strlen(const char *);
 int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);

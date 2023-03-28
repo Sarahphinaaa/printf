@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdio.h>
 
 void print_buffer(char buffer[], int *buff_ind);
 
@@ -21,8 +19,6 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 
-	if (!format || (format[0] == '%' && !format[1]))
-		return (-1);
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')

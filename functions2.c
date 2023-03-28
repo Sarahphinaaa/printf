@@ -1,10 +1,8 @@
 #include "main.h"
 
-/********************* PRINT POINTER *********************/
+/****************** PRINT POINTER ******************/
 /**
  * print_pointer - Prints the value of a pointer variable
- * to the
- * standard output
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -187,43 +185,4 @@ int print_rot13string(va_list types, char buffer[],
 		}
 	}
 	return (count);
-}
-
-/**
-* is_printable - Evaluates if a char is printable
-* @c: char to be assessed
-*
-* Return: 1 if c is printable, 0 otherwise
-*/
-int is_printable(char c)
-{
-	if (c >= 32 && c < 127)
-	{
-		return (1);
-	}
-	return (0);
-}
-/**
-* app_hexa_code - append ascii in hexadecimal code to buffer
-* @buffer: Array of chars
-* @i: Index at which to start appending
-* @ascii_code: ASCII CODE
-* Return: Always 3
-*/
-int append_hexa_code(char ascii_code, char buffer[], int i)
-{
-	char map_to[] = "0123456789ABCDEF";
-	/* The hexa format code is always 2 digits long*/
-	if (ascii_code < 0)
-	{
-		ascii_code *= -1;
-	}
-	buffer[i++] = '/';
-	buffer[i++] = '/';
-	buffer[i++] = 'x';
-
-	buffer[i++] = map_to[ascii_code / 16];
-	buffer[i] = map_to[ascii_code % 16];
-
-	return (3);
 }

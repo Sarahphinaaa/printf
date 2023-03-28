@@ -3,8 +3,6 @@
 /************************* PRINT UNSIGNED NUMBER *************************/
 /**
  * print_unsigned - Prints an unsigned number
- * to the
- * standard output
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -160,23 +158,4 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	i++;
 
 	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
-}
-/**
-* convert_size_unsgnd - changes a number to the specified size
-* @num: Number to be changed
-* @size: number indicating the type to be changed
-*
-* Return: changed value of num
-*/
-long int convert_size_unsgnd(unsigned long int num, int size)
-{
-	if (size == S_LONG)
-	{
-		return (num);
-	}
-	else if (size == S_SHORT)
-	{
-		return ((unsigned short) num);
-	}
-	return ((unsigned int) num);
 }

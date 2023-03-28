@@ -1,10 +1,9 @@
 #include "main.h"
-/************************* PRINT CHAR ****************************/
+
+/************************* PRINT CHAR *************************/
 
 /**
  * print_char - Prints a char
- * to the standard
- * output
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -13,8 +12,6 @@
  * @size: Size specifier
  * Return: Number of chars printed
  */
-
-
 int print_char(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
@@ -143,25 +140,7 @@ int print_int(va_list types, char buffer[],
 
 	return (write_number(is_negative, i, buffer, flags, width, precision, size));
 }
-/**
-* convert_size_number - changes a number to the specified size
-* @num: Number to be changed
-* @size: number indicating the type to be changed
-*
-* Return: changed value of num
-*/
-long int convert_size_number(long int num, int size)
-{
-	if (size == S_LONG)
-	{
-		return (num);
-	}
-	else if (size == S_SHORT)
-	{
-		return ((unsigned short) num);
-	}
-	return ((unsigned int) num);
-}
+
 /************************* PRINT BINARY *************************/
 /**
  * print_binary - Prints an unsigned number

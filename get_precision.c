@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * get_precision - Calculates the precision for printing and returns the
- * result to the stdout
+ * get_precision - Calculates the precision for printing
  * @format: Formatted string in which to print the arguments
  * @i: List of arguments to be printed.
  * @list: list of arguments.
@@ -39,18 +38,4 @@ int get_precision(const char *format, int *i, va_list list)
 	*i = curr_i - 1;
 
 	return (precision);
-}
-/**
-* is_digit - verifies if a char is a digit
-* @c: char to be evaluated
-*
-* Return: 1 if c is a digit, 0 otherwise
-*/
-int is_digit(char c)
-{
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	return (0);
 }

@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 		}
 	}
 
-	buffer(-1);
+	print_buffer(buffer, &buff_ind);
 
 	va_end(list);
 
